@@ -693,7 +693,7 @@ section {
 }
 .features .icon-box i {
   font-size: 48px;
-  float: left;
+  float: right;
   color: #5846f9;
 }
 .features .icon-box p {
@@ -706,6 +706,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
+  
 }
 
 /*--------------------------------------------------------------
