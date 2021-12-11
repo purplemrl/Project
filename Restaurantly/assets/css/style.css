@@ -12,6 +12,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #0c0b09;
   color: #fff;
+  direction: rtl;
 }
 
 a {
@@ -825,7 +826,7 @@ section {
 .menu .menu-img {
   width: 70px;
   border-radius: 50%;
-  float: left;
+  float: right;
   border: 5px solid rgba(255, 255, 255, 0.2);
 }
 .menu .menu-content {
@@ -866,7 +867,7 @@ section {
   color: #cda45e;
 }
 .menu .menu-ingredients {
-  margin-left: 85px;
+  margin-right: 85px;
   font-style: italic;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
