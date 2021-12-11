@@ -1257,7 +1257,7 @@ section {
 }
 .contact .info i {
   font-size: 20px;
-  float: left;
+  float: right;
   width: 44px;
   height: 44px;
   background: #cda45e;
@@ -1266,6 +1266,10 @@ section {
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+}
+.contact .hi{
+  margin-right: 55px;
 }
 .contact .info h4 {
   padding: 0 0 0 60px;
