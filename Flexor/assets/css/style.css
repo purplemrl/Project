@@ -588,7 +588,7 @@ section {
   color: #fff;
 }
 .about .icon-box .title {
-  margin-left: 85px;
+  margin-right: 85px;
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 18px;
@@ -601,7 +601,7 @@ section {
   color: #ff5821;
 }
 .about .icon-box .description {
-  margin-left: 85px;
+  margin-right: 85px;
   line-height: 24px;
   font-size: 14px;
 }
