@@ -782,12 +782,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .dashboard .news img {
   width: 80px;
-  float: left;
+  float: right;
   border-radius: 5px;
 }
 .dashboard .news h4 {
   font-size: 15px;
-  margin-left: 95px;
+  margin-right: 95px;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -801,7 +801,7 @@ h1, h2, h3, h4, h5, h6 {
 .dashboard .news p {
   font-size: 14px;
   color: #777777;
-  margin-left: 95px;
+  margin-right: 95px;
 }
 
 /* Recent Sales */
