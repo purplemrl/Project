@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  direction: rtl;
 }
 
 a {
@@ -500,7 +501,7 @@ section {
   display: block;
   font-weight: 700;
   color: #3b434a;
-  margin-left: 50px;
+  margin-right: 50px;
 }
 .about .content .count-box p {
   padding: 15px 0 0 0;
