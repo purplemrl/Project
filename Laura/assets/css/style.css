@@ -546,7 +546,7 @@ section {
   color: #3b434a;
 }
 .about .skills-content .progress .skill .val {
-  float: right;
+  float: left;
   font-style: normal;
 }
 .about .skills-content .progress-bar-wrap {
@@ -602,7 +602,7 @@ section {
 }
 .resume .resume-item::before {
   content: "";
-  position: absolute;
+  position:absolute;
   width: 16px;
   height: 16px;
   border-radius: 50px;
@@ -610,6 +610,7 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #82909c;
+  
 }
 
 /*--------------------------------------------------------------
