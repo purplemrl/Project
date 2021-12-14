@@ -16,6 +16,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;
   color: #444444;
+  direction: rtl;
 }
 
 a {
@@ -39,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 60px;
   padding: 20px 30px;
   transition: all 0.3s;
+  
 }
 @media (max-width: 1199px) {
   #main {
@@ -536,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar {
   position: fixed;
   top: 60px;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 300px;
   z-index: 996;
@@ -564,7 +566,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1200px) {
   #main, #footer {
-    margin-left: 300px;
+    margin-right: 300px;
   }
 }
 @media (max-width: 1199px) {
@@ -672,7 +674,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Filter dropdown */
 .dashboard .filter {
   position: absolute;
-  right: 0px;
+  left: 10px;
   top: 15px;
 }
 .dashboard .filter .icon {
