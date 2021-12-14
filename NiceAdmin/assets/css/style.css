@@ -16,6 +16,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;
   color: #444444;
+  direction: rtl;
 }
 
 a {
@@ -534,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar {
-  position: fixed;
+  float: right;
   top: 60px;
   left: 0;
   bottom: 0;
@@ -672,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Filter dropdown */
 .dashboard .filter {
   position: absolute;
-  right: 0px;
+  left: 10px;
   top: 15px;
 }
 .dashboard .filter .icon {
