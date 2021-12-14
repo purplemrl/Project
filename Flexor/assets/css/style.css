@@ -1290,6 +1290,7 @@ section {
 }
 .faq .faq-list a.collapsed .icon-show {
   display: inline-block;
+
 }
 .faq .faq-list a.collapsed .icon-close {
   display: none;
