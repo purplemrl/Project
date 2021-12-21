@@ -1,8 +1,11 @@
+.container{
+    position:relative;
+}
 .center {
-    display: flex;
+    display:flex;
     margin : auto ;
     width: 50%;
-    justify-content: center;
+    justify-content:center;
   }
 .my-atropos {
     width: auto;
@@ -13,3 +16,11 @@
 body{
     background-color: rgb(167, 229, 252);
 }
+.btnshow{
+    position: absolute;
+    bottom: 10px;
+	left: 200px;
+	width: 100px;
+}
+
+
