@@ -1,0 +1,15 @@
+.center {
+    display: flex;
+    margin : auto ;
+    width: 50%;
+    justify-content: center;
+  }
+.my-atropos {
+    width: auto;
+    height: auto;
+    display: block;
+   
+  }
+body{
+    background-color: rgb(167, 229, 252);
+}
