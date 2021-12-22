@@ -16,11 +16,10 @@
 body{
     background-color: rgb(167, 229, 252);
 }
-.btnshow{
+.container.btnshow{
     position: absolute;
     bottom: 10px;
 	left: 200px;
-	width: 100px;
 }
 
 
