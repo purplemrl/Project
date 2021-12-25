@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "moment": "^2.29.1",
+    "moment-jalaali": "^0.9.4",
+    "semver": "^7.3.5"
+  }
+}

@@ -6,77 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
    <link rel="stylesheet" href="style2.css"> 
-   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js" integrity="sha256-GcByKJnun2NoPMzoBsuCb4O2MKiqJZLlHTw3PJeqSkI=" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" integrity="sha256-16PDMvytZTH9heHu9KBPjzrFTaoner60bnABykjNiM0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" integrity="sha256-16PDMvytZTH9heHu9KBPjzrFTaoner60bnABykjNiM0=" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js" integrity="sha256-XOMgUu4lWKSn8CFoJoBoGd9Q/OET+xrfGYSo+AKpFhE=" crossorigin="anonymous"></script>
     <link rel="icon" href="assets/img/icon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" rel="stylesheet" type="text/css" />
- 
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+     <script src="dist/jquery.roadmap.js" type="text/javascript"></script>
      <!-- Include jQuery Roadmap CSS -->
-     <link href="../dist/jquery.roadmap.min.css" rel="stylesheet" type="text/css" />
- 
-   <script>
+     <link href="dist/jquery.roadmap.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js" integrity="sha256-GcByKJnun2NoPMzoBsuCb4O2MKiqJZLlHTw3PJeqSkI=" crossorigin="anonymous"></script>
+     <script src="node_modules/moment/min/moment.min.js"></script>
+     <script src="node_modules/moment-jalaali/build/moment-jalaali.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.4/package.json" >
+</head>
+<body>
+     <!-- Include jQuery -->
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+ <!-- Include jQuery Roadmap Plugin -->
+<div id="my-roadmap"></div>
+    <div id='calendar'></div>
+    <script>
+        
+  var calendarEl = document.getElementById('calendar');
+document.addEventListener('DOMContentLoaded', function() {
+      
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+          initialView: 'dayGridMonth',
+          events:   [
+    {
+      "title": "Event 1",
+      "start": "2021-12-05T12:00:00",
+      "end": "2021-12-05T18:00:00"
+    },
+    {
+      "title": "Event 2",
+      "start": "2021-12-08",
+      "end": "2021-12-10"
+    }
+  ]
         });
         calendar.render();
       });
 
-    </script>
-    
-</head>
-<body>
-     <!-- Include jQuery -->
- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+//          calendar.on('dateClick', function(info) {
+//    console.log('clicked on ' + info.dateStr);
+//  });
+var moment = require('moment-jalaali');
+moment().format('jYYYY/jM/jD');
+ 
 
- <!-- Include jQuery Roadmap Plugin -->
- <script src="../dist/jquery.roadmap.js" type="text/javascript"></script>
-    <div id='calendar'></div>
-    <script>
-        calendar.on('dateClick', function(info) {
-  console.log('clicked on ' + info.dateStr);
-});
 
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  initialView: 'listWeek'
-});
-
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  initialView: 'listWeek',
-  events: [
-    {
-      title: 'Meeting',
-      start: '2019-08-12T14:30:00',
-      extendedProps: {
-        status: 'done'
-      }
-    },
-    {
-      title: 'Birthday Party',
-      start: '2019-08-13T07:00:00',
-      backgroundColor: 'green',
-      borderColor: 'green'
-    }
-  ],
-  eventDidMount: function(info) {
-    if (info.event.extendedProps.status === 'done') {
-
-      // Change background color of row
-      info.el.style.backgroundColor = 'red';
-
-      // Change color of dot marker
-      var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
-      if (dotEl) {
-        dotEl.style.backgroundColor = 'white';
-      }
-    }
-  }
-
-});
     </script>
     <br>
     <br>
@@ -106,13 +86,25 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
                 content: 'cinema'
             },
             {
+                date: '12.23.2021',
+                content: 'cinema'
+            },
+            {
+                date: '12.23.2021',
+                content: 'cinema'
+            },
+            {
+                date: '12.23.2021',
+                content: 'cinema'
+            },
+            {
                 date: '12.27.2021',
                 content: 'shoping'
             }
         ];
 
         $('#my-roadmap').roadmap(event, {
-            eventsPerSlide: 3,
+            eventsPerSlide: 6,
             slide: 1,
             prevArrow: '<i class="material-icons">keyboard_arrow_left</i>',
             nextArrow: '<i class="material-icons">keyboard_arrow_right</i>',
